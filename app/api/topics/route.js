@@ -9,7 +9,15 @@ export async function POST(requst) {
   return NextResponse.json({ message: "Topic created" }, { status: 201 });
 }
 
-export async function GET(request) {
+export async function GET() {
   await connectMongoDB();
-  return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+  const topics = await Topic.find();
+  return NextResponse.json({ topics });
+}
+
+export async function DELETE(requst) {
+  const id = requst.nextUrl.searchParams.get("id");
+  await connectMongoDB();
+  await Topic.findByIdAndDelete(id);
+  return NextResponse.json({ message: "Topic deleted" }, { status: 200 });
 }
