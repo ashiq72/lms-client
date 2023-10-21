@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { RiDeleteBin3Line } from "react-icons/ri";
 import { BiEditAlt } from "react-icons/bi";
-export default function Card() {
+export default function Card({ topic }) {
   return (
-    <div className=" bg-slate-100 p-5 rounded flex items-start justify-between">
+    <div className=" bg-slate-100 p-5 rounded flex items-start justify-between my-4">
       <div className="border-l-4 border-gray-400 pl-5 ">
-        <h1 className="text-2xl font-bold">JavaScript</h1>
+        <h1 className="text-2xl font-bold">{topic?.title}</h1>
         <p className="text-lg text-slate-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
