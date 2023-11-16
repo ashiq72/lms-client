@@ -5,7 +5,7 @@ export default function Add() {
         <h1 className="text-2xl font-extrabold text-white">Todu Add</h1>
       </div>
       <div>
-        <from className="p-4 flex flex-col gap-y-4">
+        <form className="p-4 flex flex-col gap-y-4">
           <input
             type="text"
             name="title"
@@ -19,7 +19,7 @@ export default function Add() {
           <button className="bg-green-600  hover:bg-slate-200 hover:text-black transition-all text-white font-bold py-2 rounded">
             Submit
           </button>
-        </from>
+        </form>
       </div>
     </div>
   );
