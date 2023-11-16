@@ -6,14 +6,7 @@ export default function Card({ topic }) {
     <div className=" bg-slate-100 p-5 rounded flex items-start justify-between my-4">
       <div className="border-l-4 border-gray-400 pl-5 ">
         <h1 className="text-2xl font-bold">{topic?.title}</h1>
-        <p className="text-lg text-slate-600">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </p>
+        <p className="text-lg text-slate-600">{topic?.description}</p>
       </div>
       <div className="flex gap-3">
         <button className="text-xl text-red-700 cursor-pointer">
