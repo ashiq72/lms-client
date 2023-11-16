@@ -9,15 +9,15 @@ export async function POST(requst) {
   return NextResponse.json({ message: "Topic created" }, { status: 201 });
 }
 
-// export async function GET() {
-//   await connectMongoDB();
-//   const topics = await Topic.find();
-//   return NextResponse.json({ topics });
-// }
+export async function GET() {
+  await connectMongoDB();
+  const topics = await Topic.find();
+  return NextResponse.json({ topics });
+}
 
-// export async function DELETE(requst) {
-//   const id = requst.nextUrl.searchParams.get("id");
-//   await connectMongoDB();
-//   await Topic.findByIdAndDelete(id);
-//   return NextResponse.json({ message: "Topic deleted" }, { status: 200 });
-// }
+export async function DELETE(requst) {
+  const id = requst.nextUrl.searchParams.get("id");
+  await connectMongoDB();
+  await Topic.findByIdAndDelete(id);
+  return NextResponse.json({ message: "Topic deleted" }, { status: 200 });
+}
