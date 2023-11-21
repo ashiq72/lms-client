@@ -20,8 +20,8 @@ export default async function CardList() {
 
   return (
     <div>
-      {topics.map((t, index) => (
-        <Card key={index} topic={t} />
+      {topics?.map((topic, index) => (
+        <Card key={index} topic={topic} />
       ))}
     </div>
   );
